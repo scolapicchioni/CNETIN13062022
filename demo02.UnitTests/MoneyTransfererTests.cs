@@ -29,8 +29,8 @@ namespace demo02.UnitTests {
             sut.Transfer(source, target, amountToTransfer);
 
             //Assert
-            Assert.Equal(60,source.Saldo);
-            Assert.Equal(140, target.Saldo);
+            Assert.Equal(60,source.Balance);
+            Assert.Equal(140, target.Balance);
         }
     }
 }

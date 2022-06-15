@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace demo02 {
     public class BankAccount {
+        private string accountNumber = string.Empty;
+        public string AccountNumber {
+            get { return accountNumber; }
+            set { accountNumber = value; }
+        }
         //private decimal Saldo;
 
         //public decimal GetSaldo() {
@@ -16,10 +21,10 @@ namespace demo02 {
         //    Saldo = value;
         //}
 
-        private decimal saldo; //backing field
-        public decimal Saldo { //property
-            get { return saldo; }
-            private set { saldo = value; }
+        private decimal balance; //backing field
+        public decimal Balance { //property
+            get { return balance; }
+            private set { balance = value; }
         }
         //public decimal GetSaldo() {
         //    return Saldo;
@@ -30,11 +35,11 @@ namespace demo02 {
         //}
 
         public void Withdraw(decimal amount) {
-            this.Saldo -= amount; 
+            this.Balance -= amount; 
         }
 
         public void Deposit(decimal amount) {
-            this.Saldo += amount;
+            this.Balance += amount;
         }
 
     }

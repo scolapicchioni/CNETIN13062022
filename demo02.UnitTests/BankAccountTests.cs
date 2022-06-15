@@ -47,7 +47,7 @@ namespace demo02.UnitTests {
             //sut.Saldo = 123;
             
             //Assert
-            Assert.Equal(expected, sut.Saldo);
+            Assert.Equal(expected, sut.Balance);
         }
     }
 }
