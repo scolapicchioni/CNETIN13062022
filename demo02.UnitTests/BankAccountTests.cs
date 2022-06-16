@@ -49,5 +49,18 @@ namespace demo02.UnitTests {
             //Assert
             Assert.Equal(expected, sut.Balance);
         }
+
+        [Fact]
+        public void DepositShouldIncreaseSaldo() {
+            //Arrange
+            BankAccount sut = new BankAccount();
+            decimal amount = 20;
+
+            //Act
+            sut.Deposit(amount);
+
+            //Assert
+            Assert.Equal(20, sut.Balance);
+        }
     }
 }

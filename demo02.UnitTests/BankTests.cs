@@ -22,5 +22,20 @@ public class BankTests {
         
     }
 
+    [Fact]
+    public void TransferShouldSendMoneyFromSourceToDestination() {
+        //Arrange
+        BankAccount source = new BankAccount();
+        BankAccount destination = new BankAccount();
+        decimal amount = 100;
 
+        Bank sut = new Bank();
+
+        //Act
+        sut.Transfer(source,destination, amount);
+
+        //Assert
+        Assert.Equal(100, destination.Balance);
+        Assert.Equal(-100, source.Balance);
+    }
 }

@@ -7,5 +7,10 @@
         public decimal CalculateTotal() {
             throw new NotImplementedException();
         }
+
+        public void Transfer(BankAccount source, BankAccount destination, decimal amount) {
+            source.Withdraw(amount);
+            destination.Deposit(amount);
+        }
     }
 }
