@@ -1,13 +1,37 @@
 ﻿
 using demo02;
 using demo02.Lab09;
+using demo02.Lab10;
 using System.Text;
 
 class Program {
     static void Main(string[] args) {
-        Module09_Lab01();
+        Module10();
 
     }
+
+    private static void Module10() { 
+        Rectangle rectangle = new Rectangle() { Name = "Rectangle01", Lenght = 123};
+        int myVariable = rectangle.Lenght;
+        rectangle.Lenght = 1234;
+        myVariable = rectangle.Lenght;
+        Console.WriteLine(myVariable);
+
+
+        //indexers
+        Bank rabo = new Bank();
+        rabo["123"] = new BankAccount();
+        Console.WriteLine(rabo["123"].Balance);
+
+        PrintBankAccount(new BankAccount() { AccountNumber = "RABO1234" });
+
+        void PrintBankAccount(BankAccount accountToPrint) {
+            Console.WriteLine($"Account number: {accountToPrint.AccountNumber}, Balance: {accountToPrint.Balance}");
+        }
+
+    }
+
+
 
     private static void Module09_Lab01() {
         Course course = new Course(1, "C#");
@@ -25,6 +49,22 @@ class Program {
         //mario.CurrentlyFollowingCourse = course;
 
         //mario.CurrentlyFollowingCourse.Id
+
+        List<Product> products = new List<Product>() {
+            new Product() {Id = 1, Name = "P1"},
+            new Product() {Id = 5, Name = "P5"},
+            new Product() {Id = 9, Name = "P9"}
+        };
+        MySDictionary dictionary = new MySDictionary();
+        dictionary.Products = products;
+
+        Product p5 = dictionary[5];
+
+        Dictionary<int, Product> dictionary2 = products.ToDictionary(p => p.Id);
+
+        //dictionary2[5]
+
+
     }
 
     private static void Module09() {

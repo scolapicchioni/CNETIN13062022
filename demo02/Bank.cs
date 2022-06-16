@@ -25,5 +25,16 @@
             source.Withdraw(amount);
             destination.Deposit(amount);
         }
+
+        public BankAccount this[string key] {
+            get {
+                return _accounts[key];
+            }
+            set { 
+                _accounts[key] = value;
+            }
+        }
+
+        Dictionary<string, BankAccount> _accounts = new Dictionary<string, BankAccount>();
     }
 }
