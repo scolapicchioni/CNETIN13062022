@@ -1,11 +1,24 @@
 ﻿namespace demo02 {
     public class Bank {
+        public BankAccount[] Accounts;// = new BankAccount[10];
         public BankAccount OpenAccount() {
-            throw new NotImplementedException();
+
+            BankAccount b1 = new BankAccount();
+            b1.AccountNumber = "123";
+            return b1;
         }
 
         public decimal CalculateTotal() {
-            throw new NotImplementedException();
+            decimal total = 0;
+            foreach (BankAccount account in Accounts) {
+                if (account is not null) {
+                    total += account.Balance;
+                }
+                //if (item != null) {
+
+                //}
+            }
+            return total;
         }
 
         public void Transfer(BankAccount source, BankAccount destination, decimal amount) {

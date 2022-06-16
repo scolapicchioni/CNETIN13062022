@@ -1,9 +1,74 @@
 ﻿
+using demo02;
+using demo02.Lab09;
 using System.Text;
 
 class Program {
     static void Main(string[] args) {
-        Module06_Excercise02();
+        Module09_Lab01();
+
+    }
+
+    private static void Module09_Lab01() {
+        Course course = new Course(1, "C#");
+        //course.Id = 1;
+        //course.Name = "C#";
+
+        Teacher simo = new Teacher("Simona", 1234,course);
+        //simo.Name = "Simona";
+        //simo.Salary = 1234;
+        //simo.CurrentlyTeachingCourse = course;
+
+        Student mario = new Student(12, "Mario", course);
+        //mario.Name = "Mario";
+        //mario.Id = 1234;
+        //mario.CurrentlyFollowingCourse = course;
+
+        //mario.CurrentlyFollowingCourse.Id
+    }
+
+    private static void Module09() {
+        //StreamWriter streamWriter = new StreamWriter("c:\\temp");
+
+        //streamWriter.WriteLine("something");
+
+        SimoDate date = new SimoDate();
+
+        Console.WriteLine(date.Day);
+
+        string a = "hi";
+        int b = 42;
+
+        (string bla, int yada) = (a, b);
+
+        (int d, int m, int y) = date;
+        //date.Deconstruct(out d, out m, out y);
+
+        //int d = date.Day;
+        //int m = date.Month;
+        //int y = date.Year;
+        //MyFunction(d, y, m);
+
+        
+        for (int i = 0; i < 1_000_000; i++) {
+            SimoDate x = new SimoDate();
+        }
+    }
+
+    private static void Module08() { 
+        BankAccount? GetAccountAtIndex(Bank theBank, int index) {
+            return theBank.Accounts?[index];
+        }
+
+
+        Bank b1 = new Bank();
+        b1.Accounts[0] = new BankAccount();
+        b1.Accounts[1] = new BankAccount();
+        b1.Accounts[2] = new BankAccount();
+
+        BankAccount b = GetAccountAtIndex(b1, 1);
+        //if(b is not null)
+        b?.Deposit(100);
     }
 
     private static void ArraysExamples() {

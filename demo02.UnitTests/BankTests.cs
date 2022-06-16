@@ -1,15 +1,19 @@
 ﻿namespace demo02.UnitTests; 
 public class BankTests {
-    [Fact]
-    public void GivenABankWithAccounts_TotalShouldReturnTheSumOfAllBalances() { 
+    [Theory]
+    [InlineData(100,200,300)]
+    [InlineData(200, 100, 300)]
+    public void GivenABankWithAccounts_TotalShouldReturnTheSumOfAllBalances(decimal firstBalance, decimal secondBalance, decimal expected) { 
         //Arrange
         Bank sut = new Bank();
-        BankAccount b1 = sut.OpenAccount();
-        b1.Deposit(100);
-        BankAccount b2 = sut.OpenAccount();
-        b2.Deposit(100);
+        BankAccount b1 = new BankAccount();
+        b1.Deposit(firstBalance);
+        BankAccount b2 = new BankAccount();
+        b2.Deposit(secondBalance);
 
-        decimal expected = 200;
+        sut.Accounts[0] = b1;
+        sut.Accounts[1] = b2;
+
         //Act
         decimal actual = sut.CalculateTotal();
 

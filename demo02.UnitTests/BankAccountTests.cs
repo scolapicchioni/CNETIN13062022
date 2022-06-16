@@ -62,5 +62,32 @@ namespace demo02.UnitTests {
             //Assert
             Assert.Equal(20, sut.Balance);
         }
+
+        //[Fact]
+        //public void InterestShouldNotBeSetWhenBankAccountIsNotSavings() {
+        //    //Arrange
+        //    BankAccount sut = new BankAccount();
+        //    sut.AccountType = AccountTypes.Checking;
+
+        //    //Act
+        //    sut.Interest = 4;
+
+        //    //Assert
+        //    Assert.Equal(0, sut.Interest);
+
+        //}
+
+        //[Fact]
+        //public void InterestShouldBeSetWhenBankAccountIsSavings() {
+        //    //Arrange
+        //    BankAccount sut = new BankAccount();
+        //    sut.AccountType = AccountTypes.Savings;
+
+        //    //Act
+        //    sut.Interest = 4;
+
+        //    //Assert
+        //    Assert.Equal(4, sut.Interest);
+        //}
     }
 }
