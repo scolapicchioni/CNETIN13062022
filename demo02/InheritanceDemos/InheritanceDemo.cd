@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="demo02.InheritanceDemos.FirstForm">
+    <Position X="7" Y="1.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAEBAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InheritanceDemos\FirstForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="demo02.InheritanceDemos.Label">
+    <Position X="11.75" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InheritanceDemos\Label.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="demo02.InheritanceDemos.TextBox">
+    <Position X="15.25" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InheritanceDemos\TextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="demo02.InheritanceDemos.Component">
+    <Position X="13" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABgAAAgAAQAAAAEAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>InheritanceDemos\Component.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="demo02.InheritanceDemos.SecondForm">
+    <Position X="3.5" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InheritanceDemos\SecondForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

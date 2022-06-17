@@ -1,13 +1,27 @@
 ﻿
 using demo02;
+using demo02.InheritanceDemos;
 using demo02.Lab09;
 using demo02.Lab10;
 using System.Text;
 
 class Program {
     static void Main(string[] args) {
-        Module10();
+        //Form mainScreen = new FirstForm();
 
+        //mainScreen.InitializeComponents();
+        //mainScreen.Draw();
+        //mainScreen.Start();
+
+
+        Computer myLaptop = new Computer();
+        CoffeeCupWarmer coffeeCupWarmer = new CoffeeCupWarmer();
+        myLaptop.Plug(coffeeCupWarmer);
+
+        Console.WriteLine(coffeeCupWarmer);
+        //Math.Pow(4,5)
+
+        
     }
 
     private static void Module10() { 
